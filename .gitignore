@@ -1,0 +1,14 @@
+# Secrets and local-only catalogue data pack
+**/.env
+**/.env.*
+!**/.env.example
+/data/
+
+# Dependencies and generated files
+**/.venv/
+/.venv
+**/node_modules/
+**/dist/
+**/__pycache__/
+*.py[cod]
+.DS_Store

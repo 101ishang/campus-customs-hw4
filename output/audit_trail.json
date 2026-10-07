@@ -1,0 +1,125 @@
+[
+  {
+    "time": "2026-10-07T23:42:10+00:00",
+    "run_id": "audit-self-check",
+    "tool_name": "agent.run",
+    "args": {
+      "phase": "start"
+    },
+    "result": {
+      "status": "started"
+    },
+    "stop_reason": null
+  },
+  {
+    "time": "2026-10-07T23:42:10+00:00",
+    "run_id": "audit-self-check",
+    "tool_name": "agent.run",
+    "args": {
+      "phase": "finish"
+    },
+    "result": {
+      "status": "ok"
+    },
+    "stop_reason": "completed"
+  },
+  {
+    "time": "2026-10-07T23:42:22+00:00",
+    "run_id": "audit-test-tool",
+    "tool_name": "search_catalogue",
+    "args": {
+      "query_length": 1
+    },
+    "result": {
+      "status": "ok",
+      "product_count": 5
+    },
+    "stop_reason": null
+  },
+  {
+    "time": "2026-10-07T23:42:57+00:00",
+    "run_id": "cbdc64049f504096a05a0edd34bf470f",
+    "tool_name": "agent.run",
+    "args": {
+      "phase": "start",
+      "message_length": 5,
+      "history_count": 0,
+      "authenticated": false
+    },
+    "result": {
+      "status": "started"
+    },
+    "stop_reason": null
+  },
+  {
+    "time": "2026-10-07T23:42:57+00:00",
+    "run_id": "cbdc64049f504096a05a0edd34bf470f",
+    "tool_name": "agent.run",
+    "args": {
+      "phase": "finish"
+    },
+    "result": {
+      "status": "ok",
+      "model_requests": 1,
+      "product_matches": 0
+    },
+    "stop_reason": "completed"
+  },
+  {
+    "time": "2026-10-07T23:43:08+00:00",
+    "run_id": "ebcb7a6a7aa849139f35fb2ca6aefcb5",
+    "tool_name": "agent.run",
+    "args": {
+      "phase": "start",
+      "message_length": 15,
+      "history_count": 0,
+      "authenticated": false
+    },
+    "result": {
+      "status": "started"
+    },
+    "stop_reason": null
+  },
+  {
+    "time": "2026-10-07T23:43:08+00:00",
+    "run_id": "ebcb7a6a7aa849139f35fb2ca6aefcb5",
+    "tool_name": "agent.run",
+    "args": {
+      "phase": "finish"
+    },
+    "result": {
+      "status": "error",
+      "error_type": "RuntimeError"
+    },
+    "stop_reason": "RuntimeError"
+  },
+  {
+    "time": "2026-10-07T23:43:14+00:00",
+    "run_id": "f213ffc005cd41a9a3ac0535118809a9",
+    "tool_name": "agent.run",
+    "args": {
+      "phase": "start",
+      "message_length": 2,
+      "history_count": 0,
+      "authenticated": false
+    },
+    "result": {
+      "status": "started"
+    },
+    "stop_reason": null
+  },
+  {
+    "time": "2026-10-07T23:43:14+00:00",
+    "run_id": "f213ffc005cd41a9a3ac0535118809a9",
+    "tool_name": "agent.run",
+    "args": {
+      "phase": "finish"
+    },
+    "result": {
+      "status": "ok",
+      "model_requests": 1,
+      "product_matches": 0
+    },
+    "stop_reason": "completed"
+  }
+]

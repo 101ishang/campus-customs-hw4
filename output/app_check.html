@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Customs | Live app check</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #18324c; background: #f5f2ec; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header { padding: 34px 24px; color: white; background: #00356b; text-align: center; }
+    h1 { margin: 0 0 7px; font-size: clamp(30px, 5vw, 46px); }
+    header p { margin: 0; color: #d8e6f3; }
+    main { width: min(980px, calc(100% - 32px)); margin: 28px auto 48px; }
+    section { margin-bottom: 24px; padding: clamp(20px, 3vw, 30px); border: 1px solid #ddd7ca; background: #fffefa; }
+    h2 { margin: 0 0 18px; font-size: clamp(22px, 3vw, 30px); }
+    figure { margin: 0; }
+    figure a { display: block; overflow: hidden; border: 1px solid #d8e0e7; border-radius: 7px; background: #e9eef3; }
+    img { display: block; width: 100%; height: auto; }
+    .single { max-width: 520px; margin: 0 auto; }
+    .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    figcaption { margin-top: 10px; color: #42586a; line-height: 1.55; }
+    .context-link { display: block; margin-top: 14px; color: #00356b; font-size: 14px; font-weight: 700; text-align: center; }
+    footer { color: #566a7a; font-size: 14px; line-height: 1.55; text-align: center; }
+    @media (max-width: 700px) { .pair { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Campus Customs: live app check</h1>
+    <p>October 7, 2026 · Click a screenshot to view it at full size</p>
+  </header>
+  <main>
+    <section>
+      <h2>1. Chat checks database price and stock</h2>
+      <figure class="single">
+        <a href="app_check_images/inventory.png"><img src="app_check_images/inventory.png" alt="Chat reports the Crew Left Chest Hoodie price and exact stock by size, with medium out of stock"></a>
+        <figcaption>The assistant reported $68.00 and medium stock of zero for the Crew Left Chest Hoodie. Its full size counts match the catalogue and inventory tables.</figcaption>
+      </figure>
+      <a class="context-link" href="app_check_images/inventory_page.png">View the full product-page screenshot</a>
+    </section>
+
+    <section>
+      <h2>2. Hoodie question produces product cards</h2>
+      <div class="pair">
+        <figure>
+          <a href="app_check_images/hoodies_question.png"><img src="app_check_images/hoodies_question.png" alt="Chat shows the shopper asking what hoodies are available and the assistant naming five matches"></a>
+          <figcaption>The shopper asks for hoodies, and the assistant returns five catalogue matches.</figcaption>
+        </figure>
+        <figure>
+          <a href="app_check_images/hoodies_cards.png"><img src="app_check_images/hoodies_cards.png" alt="Dynamic hoodie cards show product images, names, prices and descriptions"></a>
+          <figcaption>The site renders linked cards with an image, name, price, and short description.</figcaption>
+        </figure>
+      </div>
+      <a class="context-link" href="app_check_images/hoodies_page.png">View the full collection-page screenshot</a>
+    </section>
+
+    <section>
+      <h2>3. Section 8 usability: page-aware chat</h2>
+      <figure class="single">
+        <a href="app_check_images/page_context.png"><img src="app_check_images/page_context.png" alt="Chat understands this product and says pink is not listed for the Crew Left Chest Hoodie"></a>
+        <figcaption>On the Crew Left Chest Hoodie page, “this” resolves to the open item. The reply correctly says pink is not listed and navy blue is the recorded color.</figcaption>
+      </figure>
+      <a class="context-link" href="app_check_images/page_context_page.png">View the full product-page screenshot</a>
+    </section>
+
+    <section>
+      <h2>Additional check: checkout clarity</h2>
+      <figure>
+        <a href="app_check_images/checkout.png"><img src="app_check_images/checkout.png" alt="Checkout preview shows a 68 dollar subtotal, no-payment notice and disabled place-order button"></a>
+        <figcaption>The checkout preview shows the item subtotal and clearly says no order or payment will be submitted.</figcaption>
+      </figure>
+    </section>
+
+    <footer>Captured from the running site in Chromium. Product facts were checked against <code>data/campus_customs.db</code>.</footer>
+  </main>
+</body>
+</html>
