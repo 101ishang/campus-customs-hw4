@@ -76,3 +76,4 @@
 
 38. create section 13
 39. follow the instructions as per the image - Put your code in a folder named hw4 and push it to a public GitHub repository. On Canvas, submit the repo URL. Do not put the real .env, campus_customs.db, or product images in the repository; use .gitignore and a placeholder .env.example. Use the shown frontend/, backend/, output/ layout, keep data/ as a local-only pack, and document how to run both services in README.md.
+40. The # FastAPI.. line was cut from the photo. The complete line is #FastAPI app - run with: uvicorn main: app --reload -- port 8000

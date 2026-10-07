@@ -55,12 +55,12 @@ const chatServer = launch(python, [
   "--host",
   "127.0.0.1",
   "--port",
-  process.env.CHAT_API_PORT ?? "8001",
+  process.env.CHAT_API_PORT ?? "8000",
 ], process.env, join(workspace, "backend"));
 
 function startViteWhenApiIsReady() {
   if (stopping || authServer.exitCode !== null || chatServer.exitCode !== null) return;
-  const socket = createConnection({ host: "127.0.0.1", port: Number(process.env.AUTH_PORT ?? 8000) });
+  const socket = createConnection({ host: "127.0.0.1", port: Number(process.env.AUTH_PORT ?? 8001) });
   socket.once("connect", () => {
     socket.destroy();
     if (!stopping) {

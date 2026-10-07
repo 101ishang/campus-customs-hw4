@@ -5,8 +5,8 @@ import { fileURLToPath } from "node:url";
 
 const frontendDir = fileURLToPath(new URL(".", import.meta.url));
 
-const authPort = process.env.AUTH_PORT ?? "8000";
-const chatApiPort = process.env.CHAT_API_PORT ?? "8001";
+const authPort = process.env.AUTH_PORT ?? "8001";
+const chatApiPort = process.env.CHAT_API_PORT ?? "8000";
 
 export default defineConfig({
   plugins: [react()],

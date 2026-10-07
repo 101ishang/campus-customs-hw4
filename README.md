@@ -38,7 +38,7 @@ The easiest way is from `hw4/frontend/`:
 npm run dev
 ```
 
-The predev step exports public catalogue data from SQLite. The launcher starts the authentication service on `127.0.0.1:8000`, the FastAPI chat service on `127.0.0.1:8001` with `backend/` as the Uvicorn working directory, and Vite on `127.0.0.1:5173`. Open the URL Vite prints. Vite proxies `/api/auth` and `/api/chat` to the respective APIs.
+The predev step exports public catalogue data from SQLite. The launcher starts the FastAPI chat service on `127.0.0.1:8000` with `backend/` as the Uvicorn working directory, the separate authentication service on `127.0.0.1:8001`, and Vite on `127.0.0.1:5173`. Open the URL Vite prints. Vite proxies `/api/auth` and `/api/chat` to the respective APIs.
 
 To run each service in a separate terminal instead, start them from these directories after setup:
 
@@ -47,7 +47,7 @@ To run each service in a separate terminal instead, start them from these direct
 .venv/bin/python backend/auth_server.py
 
 # Terminal 2, from hw4/backend/
-../.venv/bin/python -m uvicorn main:app --host 127.0.0.1 --port 8001 --reload
+../.venv/bin/python -m uvicorn main:app --reload --port 8000
 
 # Terminal 3, from hw4/frontend/
 npm run sync:catalogue
@@ -55,6 +55,8 @@ npm exec vite -- --host 127.0.0.1
 ```
 
 The chat API exposes `GET /health`, `POST /api/chat`, and `GET /api/chat/history`. Signed-in sessions come from the auth service. The agent uses read-only catalogue tools, and `output/audit_trail.json` retains bounded run/tool summaries across runs. See [output/harness.md](output/harness.md) for model fields, safety rules, limits, data flow, and result caps. The checkout page is a preview and does not collect payment or place orders.
+
+The assignment's FastAPI command is `uvicorn main:app --reload --port 8000` when run from `hw4/backend/`. The colon and `--port` must have no spaces inside them for the command to work. Run the auth service on port 8001 as shown above so the two services do not compete for port 8000.
 
 ## Checks
 

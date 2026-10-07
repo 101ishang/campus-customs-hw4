@@ -49,7 +49,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATABASE_PATH = ROOT / "data" / "campus_customs.db"
 AUTH_API_URL = os.environ.get(
     "AUTH_API_URL",
-    f"http://127.0.0.1:{os.environ.get('AUTH_PORT', '8000')}",
+    f"http://127.0.0.1:{os.environ.get('AUTH_PORT', '8001')}",
 ).rstrip("/")
 AUTH_COOKIE_NAME = "campus_customs_session"
 DISPLAY_HISTORY_LIMIT = 100

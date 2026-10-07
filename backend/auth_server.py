@@ -377,7 +377,7 @@ class AuthHandler(BaseHTTPRequestHandler):
 
 
 def main() -> None:
-    port = int(os.environ.get("AUTH_PORT", "8000"))
+    port = int(os.environ.get("AUTH_PORT", "8001"))
     server = ThreadingHTTPServer(("127.0.0.1", port), AuthHandler)
     server.daemon_threads = True
     print(f"Campus Customs auth API listening on 127.0.0.1:{port}", flush=True)
